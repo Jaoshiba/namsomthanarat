@@ -3,9 +3,6 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -23,4 +20,86 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@layer utilities {
+  .animate-slide-in-left {
+    animation: slideInLeft 1s ease-out forwards;
+  }
+  .animate-slide-in-right {
+    animation: slideInRight 1s ease-out forwards;
+  }
+  .animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  .animate-fade-in-up-delay-1 {
+    animation: fadeInUp 1s ease-out 0.2s forwards;
+  }
+  .animate-fade-in-up-delay-2 {
+    animation: fadeInUp 1s ease-out 0.4s forwards;
+  }
+  .animate-fade-in-up-delay-3 {
+    animation: fadeInUp 1s ease-out 0.6s forwards;
+  }
+  .animate-fade-in-up-delay-4 {
+    animation: fadeInUp 1s ease-out 0.8s forwards;
+  }
+  .animate-fade-in-up-delay-5 {
+    animation: fadeInUp 1s ease-out 1s forwards;
+  }
+  .animate-fade-in-up-delay-6 {
+    animation: fadeInUp 1s ease-out 0.2s forwards;
+  }
+  .animate-fade-in-up-delay-7 {
+    animation: fadeInUp 1s ease-out 0.4s forwards;
+  }
+  .animate-fade-in-up-delay-8 {
+    animation: fadeInUp 1s ease-out 0.6s forwards;
+  }
+  .animate-fade-in-up-delay-9 {
+    animation: fadeInUp 1s ease-out 0.8s forwards;
+  }
+  .animate-fade-in-up-delay-10 {
+    animation: fadeInUp 1s ease-out 1s forwards;
+  }
+  .animate-fade-in-up-delay-11 {
+    animation: fadeInUp 1s ease-out 1.2s forwards;
+  }
+  .animate-fade-in-up-delay-12 {
+    animation: fadeInUp 1s ease-out 1.4s forwards;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
