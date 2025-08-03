@@ -4,14 +4,14 @@ import { Search, User, ShoppingCart, Menu } from 'lucide-react';
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+    <nav className="sticky top-0 h-22 left-0 right-0 z-50 bg-white backdrop-blur-md shadow-sm">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo and Mobile Menu Button */}
         <div className="flex items-center">
           <button className="lg:hidden text-gray-800 focus:outline-none mr-4">
             <Menu size={24} />
           </button>
-          <a href="/" className="flex items-center space-x-2">
+          <a href="/" className="flex items-center space-x-2 w-12">
             <Image
               src="/logothanarat.png" // แก้ไข path ไปยังโลโก้ของคุณ
               alt="Thanarat Logo"
