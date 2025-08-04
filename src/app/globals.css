@@ -22,9 +22,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+/* Removed @tailwind utilities; - already handled by @import "tailwindcss" and custom layers */
 
 @layer utilities {
   /* Animation จากส่วน Business and OEM และ Packaging Details */
@@ -52,21 +51,7 @@ body {
   .animate-fade-in-up-delay-5 {
     animation: fadeInUp 1s ease-out 1s forwards;
   }
-  .animate-fade-in-up-delay-6 {
-    animation: fadeInUp 1s ease-out 0.2s forwards;
-  }
-  .animate-fade-in-up-delay-7 {
-    animation: fadeInUp 1s ease-out 0.4s forwards;
-  }
-  .animate-fade-in-up-delay-8 {
-    animation: fadeInUp 1s ease-out 0.6s forwards;
-  }
-  .animate-fade-in-up-delay-9 {
-    animation: fadeInUp 1s ease-out 0.8s forwards;
-  }
-  .animate-fade-in-up-delay-10 {
-    animation: fadeInUp 1s ease-out 1s forwards;
-  }
+  /* Removed duplicate delay classes for fade-in-up animation */
   .animate-fade-in-up-delay-11 {
     animation: fadeInUp 1s ease-out 1.2s forwards;
   }
@@ -120,5 +105,21 @@ body {
   }
   100% {
     transform: scale(1.1);
+  }
+}
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@layer utilities {
+  .animate-zoom-in {
+    animation: zoomIn 1s ease-out forwards;
   }
 }
